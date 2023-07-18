@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Profile Settings</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#edit">Edit Profile</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#inbox">Inbox</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div id="edit">
+            <h2>Edit Profile</h2>
+            <!-- Edit profile form here -->
+        </div>
+        
+        <div id="help">
+            <h2>Help</h2>
+            <!-- Help content here -->
+        </div>
+        
+        <div id="settings">
+            <h2>Settings</h2>
+            <!-- Settings content here -->
+        </div>
+        
+        <div id="inbox">
+            <h2>Inbox</h2>
+            <!-- Inbox content here -->
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = this.getAttribute('href').substring(1);
+                document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

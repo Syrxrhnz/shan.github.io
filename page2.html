@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anteikü Café</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style2.css">
+
+  </head>
+  <body>
+    <!-- header section starts -->
+
+    <header class="header">
+
+      <h2 class="logo">Anteikü Café</h2>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Location</a>
+      </nav>
+
+      <div class="icons">
+        <div class="fas fa-user" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+
+      <div class="cart-items-container">
+         
+        <div class="cart-item">
+          <img src="img.jpg" alt="">
+          <div class="content">
+            <h3>Admin</h3>
+            <h2>Rhenz Louie Gutierrez</h2>
+          </div>
+        </div>
+        <div class="cart-item1">
+          <ul>
+            <ul>
+              <li>
+                <img src="user.png">
+                <a href="#" onclick="showPopup()">My Profile</a>
+              </li>
+            </ul>
+          
+            <div class="popup" id="popup">
+              <!-- Popup content -->
+              <div class="profile">
+                <h1>Account Profile</h1>
+                <br>
+                <img src="img.jpg" alt="Profile Picture">
+                <h2>Rhenz Louie Gutierrez</h2>
+                <br>
+                <br>
+                <br>  
+                <p><label>Email:</label> admin@gmail.com</p>
+                <br>
+                <p><label>Location:</label> Philippines, Tanza , Cavite.</p>
+                <br>
+                <p><label>Phone Number:</label> +639959713973</p>
+                <br>
+                <p><label>Bio:</label>I dont need an Inspirational Quote, What I need is coffee.</p>
+                <button class="close-button" onclick="hidePopup()"></button>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+                <img src="edit.png">
+                <a href="#" onclick="showPopup2()">Edit</a>
+              </li>
+            </ul>
+            
+            <div class="popup2" id="popup2">
+              <div class="container">
+                <h1>Change Email Address</h1>
+                <form id="changeEmailForm">
+                  <div class="form-group">
+                    <label for="currentEmail">Current Email:</label>
+                    <input type="email" id="currentEmail" placeholder="Enter your current email">
+                  </div>
+                  <div class="form-group">
+                    <label for="newEmail">New Email:</label>
+                    <input type="email" id="newEmail" placeholder="Enter your new email">
+                  </div>
+                  <button type="submit">Save Changes</button>
+                </form>
+                <br>
+                <br>
+                <h1>Change Password</h1>
+                <form id="changePasswordForm">
+                  <div class="form-group">
+                    <label for="currentPassword">Current Password:</label>
+                    <input type="password" id="currentPassword" placeholder="Enter your current password">
+                  </div>
+                  <div class="form-group">
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" placeholder="Enter your new password">
+                  </div>
+                  <button type="submit">Save Changes</button>
+                </form>
+              </div>
+              <button class="close-button2" onclick="hidePopup2()"></button>
+            </div>
+
+            <ul>
+              <li>
+                <img src="inbox.png">
+                <a href="#" onclick="showPopup3()">Inbox</a>
+              </li>
+            </ul>
+
+            <div class="popup3" id="popup3">
+              <div class="container">
+                <h1>Inbox</h1>
+                <div id="inbox">
+                  <!-- Inbox messages will be dynamically added here -->
+                  <div class="message">
+                    <div class="sender">Anteiku Café</div>
+                    <div class="subject">Orders Received</div>
+                    <div class="date">July 9, 2023</div>
+                    <div class="content">An Order of 2 Chaga tea Bag and 1 Frappe1 will be deliverd please wait the order paitiently Thank you.</div>
+                  </div>
+                  <div class="message">
+                    <div class="sender">Anteiku Café</div>
+                    <div class="subject">Orders Delivered</div>
+                    <div class="date">July 9, 2023</div>
+                    <div class="content">Your order has been successfully delivered please send us feedback if you enjoy our products Thank you customer.</div>
+                  </div>
+                  <div class="message">
+                    <div class="sender">Anteiku Café</div>
+                    <div class="subject">Best Seller</div>
+                    <div class="date">July 8, 2023</div>
+                    <div class="content">Hi customer our new best seller is here, please take a look at our product and enjoy our hottest sale.</div>
+                  </div>
+                  <div class="message">
+                    <div class="sender">Anteiku Café</div>
+                    <div class="subject">Best Seller</div>
+                    <div class="date">July 1, 2023</div>
+                    <div class="content">Hi customer our new best seller is here, please take a look at our product and enjoy our hottest sale.</div>
+                  </div>
+                  <!-- More messages can be added here -->
+                </div>
+              </div>
+              <button class="close-button3" onclick="hidePopup3()"></button>
+            </div>
+
+            <li><img src="settings.png"><a href="#" onclick="showPopup4()">Settings</a></li>
+
+            <div class="popup4" id="popup4">
+              <div class="language-container">
+                <h2 class="language-title">Language Settings</h2>
+                <ul class="language-list">
+                  <li class="language-item active">English</li>
+                  <li class="language-item">Spanish</li>
+                  <li class="language-item">French</li>
+                  <li class="language-item">German</li>
+                  <li class="language-item">Filipino</li>
+                  <li class="language-item">Korean</li>
+                </ul>
+                <br>
+                <button id="save-button" class="save-button">Save</button>
+                <br>
+                <br>
+                <p id="current-title">Current Language: <span id="current-language">English</span></p>
+                <p id="greeting">Hello!</p>
+              </div>
+              <button class="close-button4" onclick="hidePopup4()"></button>
+            </div>
+
+            <ul>
+              <li>
+                <img src="help.png">
+                <a href="#" onclick="showPopup5()">Help</a>
+              </li>
+            </ul>
+
+            <div class="popup5" id="popup5">
+              <!-- Popup content -->
+              <div class="centre">
+                <h1>Help Centre</h1>
+                <br>
+                <br>
+                <h2>Return Policy</h2>
+                <br>
+                <br>
+                <p>If you are unsatisfied with your coffee or tea purchase from www.AnteikuCafe.com for any reason, please contact us at info@AnteikuCafe.com within 14 days of receiving your delivery. In your initial inquiry, please include your name, order ID, the items you would like to return or replace and the reason for the return or replacement.
+
+                  <br><br>Please allow 1-3 business days for us to review your return inquiry. If you qualify for a return or replacement, a representative will provide you with instructions on how to return your unused item(s) in order to receive a refund or replacement.
+                  
+                  <br><br>To receive a full refund, all unused product(s) must be returned, unopened and in the original packaging, at the customer’s expense. Please include your original order ID in the return shipment, which allows us to recognize your return when it arrives at our facility.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br> 
+                <button class="close-button5" onclick="hidePopup5()"></button>
+              </div>
+            </div>
+
+          </ul>
+        </div>
+        <a href="index.html" class="btn">Logout</a>
+      </div>
+
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+      <div class="content">
+        <h3>Anteikü best morning Café</h3>
+        <p>"Good ideas start with brainstorming,<br>
+          Great ideas start with coffee.."</p>
+        <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">get yours now</a>
+      </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+
+    <!-- about section starts -->
+
+    <section class="about" id="about">
+      <h1 class="heading"> <span>about</span> us </h1>
+
+      <div class="row">
+        
+        <div class="image">
+          <img src="IMG/about-img.jpg" alt="">
+        </div>
+
+        <div class="content">
+          <h3>what makes our coffee special?</h3>
+          <p>We make our own coffee special by the way we make it, Coffee is much more to coffee lovers than
+            a mere relaxing beverage or a quick energy drink.
+          </p>
+          <p>There’s more to speciality coffee than the looks of it. If there’s one great thing about it, that is its quality. If you visit a coffee shop and see a good, experienced barista do their job, you’ll be amazed. You’ll notice the barista weigh the coffee beans on a scale, 
+            grind them, and pour them with a unique technique.</p>
+          <a href="#" class="btn">learn more</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+
+    <!-- menu section starts -->
+
+    <section class="menu" id="menu">
+
+      <h1 class="heading"> shop <span>menu</span> </h1>
+
+      <div class="box-container">
+
+        <div class="box">
+          <img src="IMG/menu-1.jpg" alt="">
+          <h3>Machiato</h3>
+          <div class="price">$1.85 <span>$2.25</span></div>
+          <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+          <img src="IMG/menu-2.jpg" alt="">
+          <h3>Black Coffee </h3>
+          <div class="price">$1.85 <span>$2.25</span></div>
+          <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+          <img src="IMG/menu-3.jpg" alt="">
+          <h3>Cappuccino</h3>
+          <div class="price">$1.85 <span>$2.25</span></div>
+          <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+          <img src="IMG/menu-4.jpg" alt="">
+          <h3>Frappuccino 1 </h3>
+          <div class="price">$2.75 <span>$3.50</span></div>
+          <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+          <img src="IMG/menu-5.jpg" alt="">
+          <h3>Frappuccino 2 </h3>
+          <div class="price">$2.75 <span>$3.50</span></div>
+          <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+          <img src="IMG/menu-6.png" alt="">
+          <h3>Frappuccino 3 </h3>
+          <div class="price">$2.75 <span>$3.50</span></div>
+          <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="btn">add to cart</a>
+        </div>
+
+
+      </div>
+    </section>
+    
+    <!-- menu section ends -->
+
+    <!-- products section starts -->
+
+    <section class="products" id="products">
+
+      <h1 class="heading"> <span>Best</span> Seller </h1>
+
+      <div class="box-container">
+
+        <div class="box">
+          <div class="icons">
+            <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+            <img src="IMG/product-1.jpg" alt="">
+          </div>
+          <div class="content">
+            <h3>Green Tea</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">$2.25 <span>$3.00</span></div>
+          </div> 
+        </div>
+
+        <div class="box">
+          <div class="icons">
+            <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+            <img src="IMG/product-2.jpg" alt="">
+          </div>
+          <div class="content">
+            <h3>Chaga Tea</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">$2.25 <span>$3.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icons">
+            <a href="file:///C:/Users/PC/Desktop/123/menu.html" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+            <img src="IMG/product-3.jpg" alt="">
+          </div>
+          <div class="content">
+            <h3>Peaberry Tea</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">$2.25 <span>$3.00</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- products section ends -->
+
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+
+      <h1 class="heading">Locate <span>Us</span> </h1>
+
+      <div class="row">
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123696.54182259103!2d120.74573407661204!3d14.339469355510035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33962a4a90f450f5%3A0x74e2ecb55e8b5f8c!2sTanza%2C%20Cavite!5e0!3m2!1sfil!2sph!4v1682143291565!5m2!1sfil!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <form action="">
+          <h3>get in touch</h3>
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email1" placeholder="Email">
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="number" placeholder="Number">
+          </div>
+          <input type="submit" value="contact now" class="btn">
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- location section ends -->
+
+    <!-- custom js file link -->
+    <script src="script2.js"></script>
+
+    <footer>
+      <p class="copyright">
+        &copy; 2023 Anteikü Café. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      function showPopup() {
+        // Hide the second popup if it's currently displayed
+        hidePopup2();
+        hidePopup3();
+        hidePopup4();
+        hidePopup5();
+        
+        // Display the first popup
+        document.getElementById("popup").style.display = "block";
+      }
+      
+      function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+
+
+      //END//
+
+
+      
+      function showPopup2() {
+        // Hide the first popup if it's currently displayed
+        hidePopup();
+        hidePopup3();
+        hidePopup4();
+        hidePopup5();
+        
+        // Display the second popup
+        document.getElementById("popup2").style.display = "block";
+      }
+      
+      function hidePopup2() {
+        document.getElementById("popup2").style.display = "none";
+      }
+
+
+      //END//
+
+
+      function showPopup3() {
+        // Hide the first popup if it's currently displayed
+        hidePopup();
+        hidePopup2();
+        hidePopup4();
+        hidePopup5();
+        
+        // Display the third popup
+        document.getElementById("popup3").style.display = "block";
+      }
+      
+      function hidePopup3() {
+        document.getElementById("popup3").style.display = "none";
+      }
+
+
+
+      //END//
+
+      
+
+      function showPopup4() {
+        // Hide the first popup if it's currently displayed
+        hidePopup();
+        hidePopup2();
+        hidePopup3();
+        hidePopup5();
+        
+        // Display the fourth popup
+        document.getElementById("popup4").style.display = "block";
+      }
+      
+      function hidePopup4() {
+        document.getElementById("popup4").style.display = "none";
+      }
+
+
+      //END//
+
+
+
+      function showPopup5() {
+        // Hide the first popup if it's currently displayed
+        hidePopup();
+        hidePopup2();
+        hidePopup3();
+        hidePopup4();
+        
+        // Display the fifth popup
+        document.getElementById("popup5").style.display = "block";
+      }
+      
+      function hidePopup5() {
+        document.getElementById("popup5").style.display = "none";
+      }
+    </script>
+
+    <script>
+      function handleChangeEmailFormSubmit(event) {
+        event.preventDefault();
+
+        // Get form inputs
+        var currentEmailInput = document.getElementById("currentEmail");
+        var newEmailInput = document.getElementById("newEmail");
+
+        // Get the values
+        var currentEmail = currentEmailInput.value;
+        var newEmail = newEmailInput.value;
+
+        // Perform validation and email change logic
+        if (currentEmail && newEmail) {
+          // Perform email change logic
+          console.log("Email change successful!");
+          // Reset form inputs
+          currentEmailInput.value = "";
+          newEmailInput.value = "";
+          // Display success message
+          showPopup("Email change successful!");
+        } else {
+          // Handle invalid form submission
+          console.log("Invalid email change request!");
+        }
+      }
+
+      function handleChangePasswordFormSubmit(event) {
+        event.preventDefault();
+
+        // Get form inputs
+        var currentPasswordInput = document.getElementById("currentPassword");
+        var newPasswordInput = document.getElementById("newPassword");
+
+        // Get the values
+        var currentPassword = currentPasswordInput.value;
+        var newPassword = newPasswordInput.value;
+
+        // Perform validation and password change logic
+        if (currentPassword && newPassword) {
+          // Perform password change logic
+          console.log("Password change successful!");
+          // Reset form inputs
+          currentPasswordInput.value = "";
+          newPasswordInput.value = "";
+          // Display success message
+          showPopup("Password change successful!");
+        } else {
+          // Handle invalid form submission
+          console.log("Invalid password change request!");
+        }
+      }
+
+      // Add event listeners to form submissions
+      var changeEmailForm = document.getElementById("changeEmailForm");
+      changeEmailForm.addEventListener("submit", handleChangeEmailFormSubmit);
+
+      var changePasswordForm = document.getElementById("changePasswordForm");
+      changePasswordForm.addEventListener("submit", handleChangePasswordFormSubmit);
+    </script>
+
+  </body>
+</html>

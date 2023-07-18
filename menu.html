@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anteikü Café Menu</title>
+        <link rel="stylesheet" href="style3.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <p class="logo">Anteikü Café Menu</p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+        </div>
+
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">$0.00</h2>
+                </div>
+                <button onclick="openPopup()">Purchase</button>
+
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <div class="wrapper">
+                          <div class="payment">
+                            <div class="payment-logo">
+                              <p>p</p>
+                            </div>
+                            <h2>Payment Gateway</h2>
+                            <div class="form">
+                              <div class="card space icon-relative">
+                                <label class="label">Name on card:</label>
+                                <input id="name-on-card" type="text" class="input" placeholder="Ex. Rhenz Gutierrez">
+                                <i class="fas fa-user"></i>
+                              </div>
+                              <div class="card space icon-relative">
+                                <label class="label">Card number:</label>
+                                <input id="card-number" type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="0000 0000 0000 0000">
+                                <i class="far fa-credit-card"></i>
+                              </div>
+                              <div class="card-grp space">
+                                <div class="card-item icon-relative">
+                                  <label class="label">Expiry date:</label>
+                                  <input id="expiry-date" type="text" name="expiry-date" class="input" placeholder="00 / 00">
+                                  <i class="far fa-calendar-alt"></i>
+                                </div>
+                                <div class="card-item icon-relative">
+                                  <label class="label">CVC:</label>
+                                  <input id="cvc" type="text" class="input" data-mask="000" placeholder="000">
+                                  <i class="fas fa-lock"></i>
+                                </div>
+                              </div>
+                              <div class="btn" onclick="validateCard()">Pay</div>
+                              <br>
+                              <div id="error-msg" style="display: none; color: red;">Card is not valid</div>
+                            </div>
+                          </div>
+                                
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>                    
+        </div>
+
+
+        <script src="script3.js"></script>
+    </body>
+</html>
